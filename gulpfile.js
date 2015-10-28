@@ -35,11 +35,7 @@ gulp.task('watch', function() {
 gulp.task('browserify', function() {
 	var bundler = browserify({
 			entries: ['source/index.js'],
-			transform: [
-				babelify.configure({
-					plugins: ["jsx-control-statements/babel"]
-				})
-			],
+			transform: babelify,
 			debug: true,
 			cache: {},
 			packageCache: {},
